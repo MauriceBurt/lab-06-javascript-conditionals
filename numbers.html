@@ -2,15 +2,20 @@
 <html>
 <body>
 <script>
-var num1=prompt("Please enter a number")
-var thousand = num1/1000%
-var hundred= num1%100
-var tens= num1/10%
-var ones= num1/1%
-console.log(thousand+ " thousands")
-console.log(hundred+ " hudreds")
-console.log(tens+ " tens")
-console.log(ones+ " ones")
+
+var num = prompt("give me a four digit number"); 
+var thou_mod = num % 1000;
+var thou =(num-thou_mod)/1000;
+var hund_mod =thou_mod % 100;
+var hund =(thou_mod-hund_mod)/100;
+var ten_mod =hund_mod % 10;
+var ten= (hund_mod-ten_mod)/10;
+var ones_mod= ten_mod % 1;
+var one= (ten_mod)/1;
+console.log(thou + " thousands");
+console.log(hund + " hundreds");
+console.log(ten + " tens");
+console.log(one + " ones")
 </script>
 </body>
 </html>
